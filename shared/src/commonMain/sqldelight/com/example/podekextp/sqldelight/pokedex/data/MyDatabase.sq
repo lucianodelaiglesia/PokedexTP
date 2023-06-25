@@ -1,0 +1,19 @@
+CREATE TABLE PokedexResultsTable (
+    name TEXT NOT NULL PRIMARY KEY,
+    url TEXT NOT NULL
+);
+
+CREATE INDEX Pokemon_name ON PokedexResultsTable(name);
+
+insertPokemon:
+INSERT INTO PokedexResultsTable(name, url)
+VALUES (?, ?);
+
+deleteAllPokemon:
+DELETE FROM PokedexResultsTable;
+
+selectAllPokemon:
+SELECT * FROM PokedexResultsTable;
+
+
+
